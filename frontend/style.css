@@ -29,3 +29,17 @@ p{
 #p2{
     color:red;
 }
+#nav {
+    background-color:bisque;
+    border: 2pt;
+    border-style:solid;
+     margin: 0 40px;   
+    padding: 10px 15px;
+    margin-bottom: 7px;
+   
+}
+#nav a{
+     text-decoration: none;
+      margin: 0 10px;   
+    padding: 10px 15px;
+}
