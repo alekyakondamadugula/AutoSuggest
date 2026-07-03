@@ -1,0 +1,25 @@
+{
+  "name": "autosuggest",
+  "version": "1.0.0",
+  "description": "This is my main repo of my project\r # This is Alekya",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekyakondamadugula/AutoSuggest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alekyakondamadugula/AutoSuggest/issues"
+  },
+  "homepage": "https://github.com/alekyakondamadugula/AutoSuggest#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
