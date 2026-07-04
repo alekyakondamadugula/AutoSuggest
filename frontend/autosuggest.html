@@ -1,18 +1,23 @@
+<!DOCTYPE html>
 <html>
+
 <head>
     <title>AutoSuggest</title>
-     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
-     <div class="spanbar">
+
+    <div class="spanbar">
         <span class="sp1">&#9881;</span>
         <span class="sp2">&#x2022; online | &#x1F552; -ms</span>
     </div>
-     
+
     <div class="div1">
+
         <h1 id="heading">
-            Alekhya Kondamadugula
+            <span class="lastname">Alekya</span>
+            <span class="firstname">Kondamadugula</span>
         </h1>
 
         <p id="p1">
@@ -20,10 +25,64 @@
         </p>
 
         <div class="search-box">
-            <input type="text" placeholder=" &#128269 Start Typing to Search">
+            <span class="search-icon">&#128269;</span>
+            <input
+                id="search-box"
+                type="text"
+                placeholder="Start typing to search phrases">
         </div>
+
+        <div id="suggestion-box"></div>
 
     </div>
 
+    <script>
+
+        const searchBox = document.getElementById("search-box");
+        const suggestionBox = document.getElementById("suggestion-box");
+
+        searchBox.addEventListener("input", function () {
+
+            const userInput = searchBox.value.trim();
+
+            if (userInput === "") {
+                suggestionBox.innerHTML = "";
+                return;
+            }
+
+            var url1 = "https://autosuggest-backend.onrender.com/api/autosuggest?q=";
+            var url3 = "&algorithm=brute&limit=10&weighted=false";
+
+            var url = url1 + encodeURIComponent(userInput) + url3;
+
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+
+                    console.log(data);
+
+                    var resultsArray = data.results;
+                    var htmlResults = "";
+
+                    for (var i = 0; i < resultsArray.length; i++) {
+                        htmlResults += "<div class='suggestion'>" +
+                            resultsArray[i].text +
+                            "</div>";
+                    }
+
+                    suggestionBox.innerHTML = htmlResults;
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        });
+
+    </script>
+
 </body>
+
 </html>
