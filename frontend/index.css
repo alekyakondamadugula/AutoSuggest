@@ -1,80 +1,107 @@
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
 }
 
-h1{
-    color:red;
+/* Home Section */
+h1 {
+    color: red;
 }
 
-#home-intro{
-    text-align:center;
-    border:3px solid blue;
-    padding:20px;
+#home-intro {
+    text-align: center;
+    border: 3px solid blue;
+    padding: 20px;
 }
 
-#home-intro:hover{
-    background-color:burlywood;
+#home-intro:hover {
+    background-color: burlywood;
 }
 
-#p2{
-    color:blue;
+#p2 {
+    color: blue;
 }
 
-#nav{
-    text-align:center;
-    background-color:brown;
-    padding:15px;
+/* Navigation Bar */
+#nav {
+    text-align: center;
+    background-color: brown;
+    padding: 15px;
 }
 
-#nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-size:18px;
+#nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
 }
 
-#nav a:hover{
-    color:yellow;
+#nav a:hover {
+    color: yellow;
 }
 
-#card{
-    width:350px;
-    margin:30px auto;
-    background:white;
-    border:2px solid gray;
-    border-radius:10px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+/* User Card */
+#card {
+    width: 350px;
+    margin: 30px auto;
+    background: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-#card-img{
-    margin-bottom:20px;
+#card-img {
+    margin-bottom: 20px;
 }
 
-#img{
-    width:250px;
-    height:250px;
-    object-fit:cover;
-    border:3px solid purple;
+#img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid purple;
+    border-radius: 5px;
 }
 
-#card-name{
-    color:blue;
+#card-name {
+    color: blue;
+    margin-bottom: 10px;
 }
 
-#card-toggle{
-    padding:10px 20px;
-    background:purple;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    margin-top:10px;
+#action {
+    width: 100%;
 }
 
-#card-toggle:hover{
-    background:darkmagenta;
+/* Common Button Style */
+#card-toggle,
+#random-user {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Toggle Button */
+#card-toggle {
+    background: purple;
+}
+
+#card-toggle:hover {
+    background: darkmagenta;
+}
+
+/* Random User Button */
+#random-user {
+    background: green;
+}
+
+#random-user:hover {
+    background: darkgreen;
 }
